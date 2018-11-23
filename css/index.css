@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 400;
+}
+body,
+html {
+  height: auto;
+  font-family: "微软雅黑";
+  font-family: "Microsoft YaHei" !important;
+  overflow-y: scroll;
+  overflow: auto;
+}
+html,
+body {
+  height: 100%;
+  overflow: auto;
+  cursor: pointer;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+img {
+  vertical-align: top;
+  display: block;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  zoom: 1;
+}
+.float_right {
+	float: right;
+}
+.float_left {
+	float: left;
+}
+.banner_img, .game_img {
+  width: 100%;
+}
+.content {
+  width: 100%;
+	height: 39.426666rem;
+	padding-top: 3.26666rem;
+  background: url(../images/whole_bg.jpg) no-repeat 0 0;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+.active_item {
+	position: relative;
+  width: 8.64rem;
+  height: 4.76rem;
+  margin: 0 auto .4rem;
+	color: #fff;
+	overflow: hidden;
+}
+.active_item_first {
+	background: url(../images/seven_day.png) no-repeat 0 0;
+	background-size: 100%;
+}
+.active_item_second {
+	background: url(../images/family_rich.png) no-repeat 0 0;
+	background-size: 100%;
+}
+.active_item_three {
+	background: url(../images/E.png) no-repeat 0 0;
+	background-size: 100%;
+}
+.active_item_first .active_content {
+	width: 3.64rem;
+	margin: .613333rem .36rem 0 0;
+}
+.active_item_second .active_content {
+	width: 3.64rem;
+	margin: .713333rem 0 0 .56rem;
+}
+.active_item_three .active_content {
+	width: 3.64rem;
+	margin: .413333rem .36rem 0 0;
+}
+.active_item .active_item_title {
+	line-height: .7rem;
+	font-size: .555555rem;
+	font-weight: bold;
+}
+.active_item .active_item_p {
+	line-height: 28px;
+}
+.active_item p {
+	line-height: .5rem;
+}
+.active_item .dot {
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	border-radius: 2.5px;
+	margin-bottom: 2px;
+	margin-right: 5px;
+	background: #fff;
+}
+.active_item .active_btn {
+	width: 3.706666rem;
+	height: 1rem;
+	line-height: 1.1rem;
+	text-align: center;
+	background: url(../images/btn_bg.png) no-repeat 0 0;
+	background-size: 100%;
+	font-weight: bold;
+	font-size: .4rem;
+}
+.active_item .active_btn_first {
+	position: absolute;
+	left: .53333rem;
+	bottom: .413333rem;
+}
+.active_item .active_btn_second {
+	position: absolute;
+	right: .533333rem;
+	bottom: .443333rem;
+}
+.active_item .active_btn_three {
+	position: absolute;
+	left: .53333rem;
+	bottom: .413333rem;
+}
+.game_img_wrap {
+	width: 8.586666rem;
+	margin: 3.54666rem auto 0;
+}
+.topic_one_wrap, .topic_two_wrap {
+	width: 8.586666rem;
+}
+.topic_one_wrap img, .topic_two_wrap img {
+	width: 100%;
+}
+.topic_one_wrap {
+	margin: 3.533333rem auto 0;
+}
+.topic_two_wrap {
+	margin: .586666rem auto 0;
+}
+.footer {
+	width: 8.626666rem;
+	margin: 1.06666rem auto 0;
+	color: #fff;
+	line-height: .4rem;
+}
+[title="站长统计"] {
+  display: none !important;
+}

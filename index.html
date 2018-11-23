@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Cache" content="no-cache" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+    />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <link rel="icon" href="data:image/ico;base64,aWNv" />
+    <script type="text/javascript" src="js/flexible.js"></script>
+    <script src="https://salescdn.pa18.com/salesinfo/eLifeAssist/common/wxRecord.js"></script>
+    <script src="https://s5.cnzz.com/z_stat.php?id=1275393178&web_id=1275393178" language="JavaScript"></script>
+    <script type="text/javascript">
+      var cnzz_protocol =
+        "https:" == document.location.protocol ? " https://" : " http://";
+      document.write(
+        unescape(
+          "%3Cspan id='cnzz_stat_icon_1274937505'%3E%3C/span%3E%3Cscript src='" +
+            cnzz_protocol +
+            "s13.cnzz.com/z_stat.php%3Fid%3D1274937505' type='text/javascript'%3E%3C/script%3E"
+        )
+      );
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <style type="text/css">
+      [title="站长统计"] {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+			<header>
+				<img class="banner_img" src="images/banner.jpg" alt="年终财富节">
+			</header>
+			<main class="content">
+				<div class="active_item active_item_first">
+					<div class="active_content float_right">
+						<h4 class="active_item_title">七天畅行无忧</h4>
+						<h6 class="active_item_p">暑期倒计时</h6>
+						<p><span class="dot"></span>短途旅行意外险，身故、残疾、医疗都有保障</p>
+					</div>
+					<div class="active_btn active_btn_first" id="f_btn" onclick="goSevenDetail('E41')">开心畅行出游</div>
+				</div>
+				<div class="active_item active_item_second">
+					<div class="active_content">
+						<h4 class="active_item_title">平安家财宝</h4>
+						<h6 class="active_item_p">守护全家人的幸福</h6>
+						<p><span class="dot"></span>保费低 保额高 保障全</p>
+					</div>
+					<div class="active_btn active_btn_second" id="s_btn" onclick="goSecondDetail('MP02050014')">守护家庭安全</div>
+				</div>
+				<div class="active_item active_item_three">
+					<div class="active_content float_right">
+						<h4 class="active_item_title">平安e生保医疗保险</h4>
+						<h6 class="active_item_p" style="line-height: 20px;">家庭常备"网红"保险</h6>
+						<p><span class="dot"></span>看病不愁 放心用药</p>
+						<p><span class="dot"></span>全程住院服务</p>
+					</div>
+					<div class="active_btn active_btn_three" id="t_btn" onclick="goThreeDetail('1020')">百万保障不担忧</div>
+				</div>
+				<div class="game_img_wrap">
+					<img id="four_btn" onclick="goPrizeDetail()" class="game_img" src="images/game_banner.png" alt="玩游戏赢大奖">
+				</div>
+				<div class="topic_one_wrap">
+					<img id="five_btn" onclick="topicOneDetail()" src="images/topic_one.png" alt="话题一">
+				</div>
+				<div class="topic_two_wrap">
+					<img id="six_btn" onclick="topicTwoDetail()" src="images/topic_two.png" alt="话题二">
+				</div>
+				<div class="footer">重要提示：本资料所载内容仅供您理解保险条款所用，在某些情况下，我们不承担给付保险金的责任，具体保险责任、责任免除、合同解除及其他内容详见保险条款。</div>
+			</main>
+		</div>
+    <script type="text/javascript">
+      //声明_czc对象:
+      var _czc = _czc || [];
+      _czc.push(["_setAccount", "1274937505"]);
+
+      /*获取地址栏url*/
+      function GetQuery(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+      }
+      /*修改回调url*/
+      function changeURLArg(url, arg, arg_val) {
+        var pattern = arg + "=([^&]*)";
+        var replaceText = arg + "=" + arg_val;
+        if (url.match(pattern)) {
+          var tmp = "/(" + arg + "=)([^&]*)/gi";
+          tmp = url.replace(eval(tmp), replaceText);
+          return tmp;
+        } else {
+          if (url.match("[\?]")) {
+            return url + "&" + replaceText;
+          } else {
+            return url + "?" + replaceText;
+          }
+        }
+        return url + "\n" + arg + "\n" + arg_val;
+      }
+      var typeNo = GetQuery("typeNo");
+      var productNo = GetQuery("productNo");
+      var interFace = GetQuery("interFace");
+      var timestamp = Date.parse(new Date()) / 1000;
+      var recordCallback = function(link) {
+        if (productNo) {
+          var link_url = changeURLArg(link, "source", "out2prd" + productNo);
+        } else {
+          var link_url = changeURLArg(link, "source", "out2prd" + typeNo);
+        }
+        window.location.href =
+          link_url + "&interFace=&visitSwitch=off&tmp=" + timestamp;
+			};
+			var prizeCallBack = function(link) {
+        if (productNo) {
+          var link_url = changeURLArg(link, "source", "out2prd" + productNo);
+        } else {
+          var link_url = changeURLArg(link, "source", "out2prd" + typeNo);
+				}
+				link_url = link_url = link_url.replace(/http.*\?/, 'https://ulink.lifeapp.pingan.com.cn/index.html?url=pars%3A%2F%2Fpars.pingan.com%2Fopen_url%3Furl%3Dhttps%253A%252F%252Fals.cdn.lifeapp.pingan.com.cn%252Felis_smp_als_dmz%252Fact-base%252Fsign-up%252Findex.html%253Faid%253D20181101510251%2526redirectUri%253Dhttps%25253A%25252F%25252Fsaas.killerwhale.cn%25252Fapproute%25252Ft%25252FVwzhOyG6%26type%3Djssdk&')
+        window.location.href =
+          link_url + "&interFace=&visitSwitch=off&tmp=" + timestamp;
+			};
+			var topicOneCallBack = function(link) {
+        if (productNo) {
+          var link_url = changeURLArg(link, "source", "out2prd" + productNo);
+        } else {
+          var link_url = changeURLArg(link, "source", "out2prd" + typeNo);
+				}
+				link_url = link_url.replace(/http.*\?/, 'https://ulink.lifeapp.pingan.com.cn/index.html?url=pars%3A%2F%2Fpars.pingan.com%2Fmc%2Ftopic_detail%3FtopicId%3DT1427%26circleType%3D04&')
+        window.location.href =
+          link_url + "&interFace=&visitSwitch=off&tmp=" + timestamp;
+			};
+			var topicTwoCallBack = function(link) {
+        if (productNo) {
+          var link_url = changeURLArg(link, "source", "out2prd" + productNo);
+        } else {
+          var link_url = changeURLArg(link, "source", "out2prd" + typeNo);
+				}
+				link_url = link_url.replace(/http.*\?/, 'https://als.cdn.lifeapp.pingan.com.cn/elis_smp_als_dmz/r-act/index.html#/micro-community/share-topic-detail?bizId=T1419&')
+        window.location.href =
+          link_url + "&interFace=&visitSwitch=off&tmp=" + timestamp;
+      };
+      var goSevenDetail = function(pro_id) {
+        _czc.push(["_trackEvent", "按钮", "七天畅行无忧", "", 0, "f_btn"]);
+        zebWxRecord.getProLink(pro_id, recordCallback, "1");
+			};
+			console.log('goSevenDetail', goSevenDetail)
+      var goSecondDetail = function(pro_id) {
+        _czc.push(["_trackEvent", "按钮", "平安家财宝", "", 0, "s_btn"]);
+        zebWxRecord.getProLink(pro_id, recordCallback, "1");
+			};
+			var goThreeDetail = function(pro_id) {
+        _czc.push(["_trackEvent", "按钮", "平安e生保医疗保险", "", 0, "t_btn"]);
+        zebWxRecord.getProLink(pro_id, recordCallback, "1");
+			};
+			var goPrizeDetail = function() {
+				_czc.push(["_trackEvent", "按钮", "财富节", "", 0, "four_btn"]);
+        zebWxRecord.getProLink('', prizeCallBack, "1");
+			}
+			var topicOneDetail = function() {
+				_czc.push(["_trackEvent", "按钮", "说出最想感谢的人", "", 0, "five_btn"]);
+        zebWxRecord.getProLink('', topicOneCallBack, "1");
+			}
+			var topicTwoDetail = function() {
+				_czc.push(["_trackEvent", "按钮", "平安锦鲤", "", 0, "six_btn"]);
+        zebWxRecord.getProLink('', topicTwoCallBack, "1");
+			}
+    </script>
+  </body>
+</html>
